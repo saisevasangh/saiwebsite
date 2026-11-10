@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import CookieBanner from "@/components/CookieBanner";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollEffects from "@/components/ScrollEffects";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { ORG_NAME, TAGLINE } from "@/lib/content";
 import "./globals.css";
 
@@ -44,6 +46,8 @@ export default function RootLayout({
         <ScrollEffects />
         <main>{children}</main>
         <Footer />
+        <WhatsAppButton />
+        <CookieBanner />
       </body>
     </html>
   );

@@ -1,31 +1,23 @@
 import type { Metadata } from "next";
-import CtaBanner from "@/components/CtaBanner";
-import GalleryGrid from "@/components/GalleryGrid";
-import PageBanner from "@/components/PageBanner";
+import Link from "next/link";
+import { ArrowLeft, Images } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Gallery",
-  description: "Photos from classrooms, performances and everyday life at Sai Seva Sangh.",
-};
+export const metadata: Metadata = { title: "Gallery" };
 
 export default function GalleryPage() {
   return (
-    <>
-      <PageBanner
-        crumb="Gallery"
-        image="/images/org.jpg"
-        alt="Students smiling in a classroom, working at their desks"
-        title="Life at Sai Seva Sangh"
-        lead="Classrooms, performances and everyday moments — a look at the life our girls are building, one day at a time."
-      />
-
-      <section className="page-section">
-        <div className="container">
-          <GalleryGrid />
-        </div>
-      </section>
-
-      <CtaBanner />
-    </>
+    <section className="stub">
+      <div className="container stub__inner">
+        <Images size={40} strokeWidth={1.5} className="stub__icon" aria-hidden="true" />
+        <h1 className="h2 serif">Gallery</h1>
+        <p className="body">
+          This page hasn&apos;t been designed yet. Share a mockup for it and it will be built in
+          the same style as the About Us page.
+        </p>
+        <Link href="/about" className="link-arrow">
+          <ArrowLeft size={15} aria-hidden="true" /> Back to About Us
+        </Link>
+      </div>
+    </section>
   );
 }

@@ -1,0 +1,62 @@
+import type { PageContent } from "./types";
+
+export const COLLABORATION: PageContent = {
+  title: "Raise a Collaboration",
+  lead: "Individual Responsibility Opportunities at Saiseva Sangh",
+  blocks: [
+    { type: "p", text: "Welcome to Saiseva Sangh, where every individual has the power to make a lasting impact. We believe in the collective strength of our community to bring about positive change. Explore the various sponsorship opportunities below and discover how you can contribute to the betterment of lives and education." },
+    { type: "h", text: "Sponsorship for Each Unit" },
+    { type: "p", text: "Empower the community by sponsoring specific units, ensuring essential resources and support are readily available." },
+    { type: "h", text: "Meals (Breakfast, Lunch, and Dinner)" },
+    { type: "p", text: "Contribute to the well-being of our members by sponsoring nutritious meals, fostering a healthy and thriving environment." },
+    { type: "h", text: "Educational Material" },
+    { type: "p", text: "Fuel the dreams of young minds by providing necessary educational materials, creating a pathway to knowledge and success." },
+    { type: "h", text: "Sponsor a Girl Child" },
+    { type: "p", text: "Support the education and empowerment of girls, breaking down barriers and creating opportunities for a brighter future." },
+    { type: "h", text: "Power of 10 Club" },
+    { type: "p", text: "Join the Power of 10 Club and make a recurring monthly donation, creating a sustainable impact with the collective strength of like-minded individuals." },
+    { type: "h", text: "Teachers Salaries" },
+    { type: "p", text: "Invest in the backbone of education by sponsoring teachers’ salaries, ensuring quality education is accessible to all." },
+    { type: "h", text: "Capital Expenditure" },
+    { type: "p", text: "Contribute to the growth and sustainability of Saiseva Sangh by supporting capital expenditure, enabling us to enhance our facilities and services." },
+    { type: "p", text: "Your generosity can transform lives and communities. Choose an opportunity that resonates with you, and together, let’s build a future filled with promise and opportunity." },
+    { type: "p", text: "Join us on this journey of compassion, education, and community development. Together, we can make a difference, one sponsorship at a time." },
+    { type: "link", label: "Donate online (Power of 10 Club & more)", href: "https://pages.razorpay.com/saisevasangh" },
+    { type: "p", text: "To raise a collaboration, please write to saisevasangh99@gmail.com or call (+91) 9989928552 / 551." },
+  ],
+};
+
+export const VOLUNTEER: PageContent = {
+  title: "Volunteer with Sai Seva Sangh",
+  hero: "https://saisevasangh.org/wp-content/uploads/2023/11/3-1.png",
+  blocks: [
+    { type: "quote", text: "The best way to find yourself is to lose yourself in the service of others. – Mahatma Gandhi" },
+    { type: "p", text: "At Sai Seva Sangh, we believe education is the most powerful gift you can offer a child. Your support helps us uplift underprivileged children by giving them access to quality education, nutrition, life skills, and holistic development." },
+    { type: "p", text: "Donations & Contributions can be made by cheque, favouring Sai Seva Sangh are tax-exempted under section 80 G of the income tax act." },
+    { type: "h", text: "Contribute in Kind" },
+    { type: "p", text: "We welcome any form of donation in kind like providing lunch & snacks, provisions, donating new clothes, footwear, stationery, and note books for our children or infrastructure and IT equipment for our centres." },
+    { type: "h", text: "Celebrate Your Special Occasion With Us" },
+    { type: "p", text: "Turn your birthday, anniversary, or festival into a day of giving! Celebrate with our children by:" },
+    { type: "list", items: [
+      "Sponsoring a midday meal or breakfast",
+      "Donating sweets, snacks, or gifts during festive occasions like Diwali, Christmas, or New Year",
+      "Hosting interactive activities to spread joy and motivation",
+    ] },
+    { type: "quote", text: "Every celebration becomes more meaningful when shared with those in need." },
+    { type: "h", text: "Volunteering Opportunities" },
+    { type: "list", items: [
+      "Teaching subjects",
+      "Helping in administration",
+      "Improving communication skills",
+      "Music classes",
+      "Dance classes",
+      "Photography",
+      "Digital marketing",
+      "Story telling",
+      "Conducting workshops",
+      "Help in cooking for the mid-day meal",
+    ] },
+    { type: "p", text: "Musical instruments we welcome help with: Harmonium, Veena, Tabla, Drum, etc. You can volunteer offline or online — tell us how many hours per day, week or month, and which day suits you." },
+    { type: "p", text: "To register as a volunteer, send your name, address, phone number, email, qualification, profession, other talents, preferred volunteering time and opportunities to saisevasangh99@gmail.com, or call (+91) 9989928552 / 551." },
+  ],
+};

@@ -1,44 +1,23 @@
 import type { Metadata } from "next";
-import CtaBanner from "@/components/CtaBanner";
-import PageBanner from "@/components/PageBanner";
-import ProgramCard from "@/components/ProgramCard";
-import { SectionHead } from "@/components/ui";
-import { ORG_NAME } from "@/lib/content";
-import { PROGRAMS } from "@/lib/content-extra";
+import Link from "next/link";
+import { ArrowLeft, GraduationCap } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Our Programs",
-  description:
-    "Education, residential care, healthcare & nutrition, skill development and spiritual education for orphaned and underprivileged girls.",
-};
+export const metadata: Metadata = { title: "Our Programs" };
 
 export default function ProgramsPage() {
   return (
-    <>
-      <PageBanner
-        crumb="Our Programs"
-        image="/images/hero.jpg"
-        alt="Four smiling girls in school uniform reading a book together outdoors"
-        title="Our Programs"
-        lead={`Quality education, residential care, healthcare, nutrition, skill development and spiritual & value-based learning — everything a girl needs to lead a self-reliant life, provided by ${ORG_NAME} completely free of cost.`}
-      />
-
-      <section className="page-section">
-        <div className="container">
-          <SectionHead
-            kicker="What we offer"
-            title="Six programs, one goal"
-            lead="Every girl in our care moves through these programs at her own pace, from her first day at school to her first day at work."
-          />
-          <div className="programs__grid">
-            {PROGRAMS.map((program, idx) => (
-              <ProgramCard key={program.slug} program={program} index={idx} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CtaBanner />
-    </>
+    <section className="stub">
+      <div className="container stub__inner">
+        <GraduationCap size={40} strokeWidth={1.5} className="stub__icon" aria-hidden="true" />
+        <h1 className="h2 serif">Our Programs</h1>
+        <p className="body">
+          This page hasn&apos;t been designed yet. Share a mockup for it and it will be built in
+          the same style as the About Us page.
+        </p>
+        <Link href="/about" className="link-arrow">
+          <ArrowLeft size={15} aria-hidden="true" /> Back to About Us
+        </Link>
+      </div>
+    </section>
   );
 }

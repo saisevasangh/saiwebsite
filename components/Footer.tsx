@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUp, Globe, Mail, MapPin, Phone } from "lucide-react";
-import { ADDRESS, EMAIL, FOOTER_STATS, ORG_NAME, PHONE, SOCIALS, TAGLINE, WEBSITE } from "@/lib/content";
+import { ADDRESS, EMAIL, FOOTER_STATS, ORG_NAME, PHONE, PHONE_HREF, SOCIALS, TAGLINE, WEBSITE } from "@/lib/content";
 import { SOCIAL_ICON_MAP } from "@/components/icons";
-import { NAV } from "@/lib/nav";
+import { footerLinks, LEGAL_LINKS } from "@/lib/nav";
 import { rv } from "@/lib/reveal";
 
 export default function Footer() {
@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="container footer__grid">
         <div className="footer__col footer__col--brand" {...rv("up")}>
           <Link href="/" className="footer__brand" aria-label={`${ORG_NAME} — home`}>
-            <Image src="/images/logo.png" alt="" width={40} height={40} className="footer__logo" />
+            <Image src="/images/logo.png" alt="" width={112} height={50} className="footer__logo" />
             <span>
               <strong>{ORG_NAME}</strong>
               <small>{TAGLINE}</small>
@@ -31,8 +31,8 @@ export default function Footer() {
         <nav aria-label="Footer" className="footer__col" {...rv("up", 1)}>
           <h2>Quick Links</h2>
           <ul>
-            {NAV.map((item) => (
-              <li key={item.href}>
+            {footerLinks().map((item) => (
+              <li key={item.label}>
                 <Link href={item.href}>{item.label}</Link>
               </li>
             ))}
@@ -46,7 +46,7 @@ export default function Footer() {
               <MapPin size={15} aria-hidden="true" /> {ADDRESS}
             </li>
             <li>
-              <a href={`tel:${PHONE.replace(/\s/g, "")}`}>
+              <a href={`tel:${PHONE_HREF}`}>
                 <Phone size={15} aria-hidden="true" /> {PHONE}
               </a>
             </li>
@@ -66,7 +66,7 @@ export default function Footer() {
               const Icon = typeof icon === "string" ? SOCIAL_ICON_MAP[icon] : icon;
               return (
                 <li key={label}>
-                  <a href={href} aria-label={label}>
+                  <a href={href} aria-label={label} target="_blank" rel="noopener noreferrer">
                     <Icon size={13} aria-hidden="true" />
                   </a>
                 </li>
@@ -75,6 +75,16 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+
+      <nav className="footer__legal" aria-label="Policies">
+        <ul className="container">
+          {LEGAL_LINKS.map((l) => (
+            <li key={l.href}>
+              <Link href={l.href!}>{l.label}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
       <div className="footer__bar">
         <div className="container footer__bar-inner">
