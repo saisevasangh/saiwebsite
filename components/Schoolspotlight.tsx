@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight, Play } from "lucide-react";
 
-export const SCHOOL_SITE = "http://localhost:3000/4s-school-of-excellence/";
+export const SCHOOL_SITE = "https://saiwebsite-zeta.vercel.app/4s-school-of-excellence/";
 export const SCHOOL_VIDEO = "https://www.youtube.com/watch?v=WC6f1zsGX00&t=1s";
 
 const DEFAULT_SLIDES = [
