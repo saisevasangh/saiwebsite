@@ -8,16 +8,20 @@ type Props = {
   label: string;
   interval?: number; // ms; 0 disables autoplay
   className?: string;
+  /** Viewport height follows the active slide (for slides of different heights). */
+  adaptive?: boolean;
 };
 
 /**
  * Accessible one-slide-at-a-time carousel: arrows, dots, swipe, keyboard,
  * autoplay that pauses on hover/focus and is off for reduced-motion users.
  */
-export default function Slider({ slides, label, interval = 6500, className = "" }: Props) {
+export default function Slider({ slides, label, interval = 6500, className = "", adaptive = false }: Props) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const startX = useRef<number | null>(null);
+  const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [height, setHeight] = useState<number | undefined>(undefined);
   const count = slides.length;
 
   const go = useCallback((n: number) => setIndex(((n % count) + count) % count), [count]);
@@ -29,9 +33,23 @@ export default function Slider({ slides, label, interval = 6500, className = "" 
     return () => window.clearInterval(t);
   }, [interval, paused, count]);
 
+  useEffect(() => {
+    if (!adaptive) return;
+    const measure = () => setHeight(slideRefs.current[index]?.offsetHeight);
+    measure();
+    const ro = new ResizeObserver(measure);
+    const el = slideRefs.current[index];
+    if (el) ro.observe(el);
+    window.addEventListener("resize", measure);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [adaptive, index, count]);
+
   return (
     <div
-      className={`slider ${className}`}
+      className={`slider ${adaptive ? "slider--adaptive " : ""}${className}`}
       role="region"
       aria-roledescription="carousel"
       aria-label={label}
@@ -53,11 +71,14 @@ export default function Slider({ slides, label, interval = 6500, className = "" 
         if (Math.abs(dx) > 50) go(index + (dx < 0 ? 1 : -1));
       }}
     >
-      <div className="slider__viewport">
+      <div className="slider__viewport" style={adaptive && height ? { height } : undefined}>
         <div className="slider__track" style={{ transform: `translateX(-${index * 100}%)` }}>
           {slides.map((slide, i) => (
             <div
               key={i}
+              ref={(el) => {
+                slideRefs.current[i] = el;
+              }}
               className="slider__slide"
               role="group"
               aria-roledescription="slide"

@@ -23,6 +23,7 @@ export const NAV: NavItem[] = [
       { label: "Our Values", href: "/our-values" },
       { label: "Admissions", href: "/admissions" },
       { label: "4S School Of Excellence", href: "/4s-school-of-excellence" },
+      { label: "The Project", href: "/project" },
     ],
   },
   {

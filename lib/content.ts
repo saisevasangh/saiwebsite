@@ -4,12 +4,20 @@
  */
 import {
   BookOpen,
+  Brain,
   Facebook,
   GraduationCap,
+  HandHeart,
+  HeartHandshake,
   Instagram,
   Linkedin,
+  MessageSquare,
   Music2,
+  Settings,
+  Star,
   Target,
+  TrendingUp,
+  UserRound,
   Users,
   Utensils,
   type LucideIcon,
@@ -28,6 +36,51 @@ export const WEBSITE = "www.saisevasangh.org";
 export const REG_NO = "1961/88";
 
 export const YOUTUBE_CHANNEL = "https://www.youtube.com/channel/UCiY6sVOWhmqG49DycYoHM9w";
+
+
+
+export const FRAMEWORK = [
+  {
+    title: "Skills",
+    text: "Building practical expertise for real-world careers.",
+    detail:
+      "Hands-on training in digital, creative, performing and wellness fields, so every student leaves able to do something they can earn from.",
+    icon: Settings,
+    tone: "blue",
+  },
+  {
+    title: "Systems Thinking",
+    text: "Developing problem-solving and analytical abilities.",
+    detail:
+      "Students learn to break real problems into parts, see how the parts connect and design solutions, the same habit that entrepreneurs rely on.",
+    icon: Brain,
+    tone: "purple",
+  },
+  {
+    title: "Service Mindset",
+    text: "Creating socially responsible and community-focused leaders.",
+    detail:
+      "Learning is tied to community. Students are encouraged to use what they build to help the people around them.",
+    icon: HeartHandshake,
+    tone: "green",
+  },
+  {
+    title: "Self-Leadership",
+    text: "Instilling confidence, discipline, and personal accountability.",
+    detail:
+      "Confidence, discipline and accountability are practised every day, not just talked about.",
+    icon: UserRound,
+    tone: "orange",
+  },
+] as const;
+
+export const CAREER_POINTS = [
+  "Launch entrepreneurial ventures",
+  "Work as freelancers and skilled professionals",
+  "Participate in internships and industry-linked projects",
+  "Develop income-generating capabilities",
+  "Build confidence through real-world experience",
+];
 
 export const SOCIALS = [
   { label: "Facebook", icon: Facebook, href: "https://www.facebook.com/saisevasangh999/" },
@@ -81,7 +134,9 @@ export const IMPACT_STATS: { value: string; label: string; note?: string; icon: 
    ========================================================================== */
 
 export const HOME_INTRO = {
-  title: "35 Years of Humble Service — Free Residential Care and Education for Orphaned and Underprivileged Girls",
+  title: "35 Years of Humble Service",
+  subtitle:
+    "Free Residential Care, Education and AI driven skill development for Orphaned and Underprivileged Girls",
   lines: [
     `Sai Seva Sangh is a registered charitable organization (Reg. No. ${REG_NO}) guided by the motto “Love All, Serve All.”`,
     "For the past 35 years, the organization has been dedicated to empowering orphaned and underprivileged girl children from low-income communities and rural backgrounds. We provide free, holistic education along with safe residential facilities, focusing on skill development and creating a nurturing environment that enables girls to grow with dignity, confidence and purpose.",
@@ -101,34 +156,34 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     title: "Global Women Inspiration Award – 2025",
     text: "C. Aruna Pradeep, Secretary of Sai Seva Sangh, honoured as Women Changemaker in Social Impact on 20th September 2025.",
-    image: "/images/hero-award.jpg",
+    image: "/images/sliders/one.jpg",
     alt: "Global Women Inspiration Award 2025 — Women Changemaker in Social Impact, C. Aruna Pradeep, Secretary, Sai Seva Sangh",
   },
   {
-    title: "Admissions Open 2026 – 2027",
-    text: "Free, value-based education for girls at Sri Satya Sai Vidya Mandir School.",
-    cta: { label: "Admission process", href: "/admissions" },
+    title: "Global Women Inspiration Award – 2025",
+    text: "C. Aruna Pradeep, Secretary of Sai Seva Sangh, honoured as Women Changemaker in Social Impact on 20th September 2025.",
+    image: "/images/sliders/two.jpg",
+    alt: "Global Women Inspiration Award 2025 — Women Changemaker in Social Impact, C. Aruna Pradeep, Secretary, Sai Seva Sangh",
   },
   {
-    title: "Power of 10 Club",
-    text: "Just ₹10 a day or ₹300 a month can transform a girl’s future.",
-    cta: { label: "Know more", href: "/raise-a-collaboration" },
+    title: "Global Women Inspiration Award – 2025",
+    text: "C. Aruna Pradeep, Secretary of Sai Seva Sangh, honoured as Women Changemaker in Social Impact on 20th September 2025.",
+    image: "/images/sliders/three.jpg",
+    alt: "Global Women Inspiration Award 2025 — Women Changemaker in Social Impact, C. Aruna Pradeep, Secretary, Sai Seva Sangh",
   },
   {
-    title: "4S School of Excellence",
-    text: "Empowering girls through skill-based education.",
-    cta: { label: "Explore", href: "/4s-school-of-excellence" },
+    title: "Global Women Inspiration Award – 2025",
+    text: "C. Aruna Pradeep, Secretary of Sai Seva Sangh, honoured as Women Changemaker in Social Impact on 20th September 2025.",
+    image: "/images/sliders/four.png",
+    alt: "Global Women Inspiration Award 2025 — Women Changemaker in Social Impact, C. Aruna Pradeep, Secretary, Sai Seva Sangh",
   },
   {
-    title: "35th Anniversary",
-    text: "Three and a half decades of love, care and service to the girl child.",
-    cta: { label: "See the celebrations", href: "/35th-anniversary" },
+    title: "Global Women Inspiration Award – 2025",
+    text: "C. Aruna Pradeep, Secretary of Sai Seva Sangh, honoured as Women Changemaker in Social Impact on 20th September 2025.",
+    image: "/images/sliders/five.png",
+    alt: "Global Women Inspiration Award 2025 — Women Changemaker in Social Impact, C. Aruna Pradeep, Secretary, Sai Seva Sangh",
   },
-  {
-    title: "Love All, Serve All",
-    text: "Become part of a service to humanity that lasts forever.",
-    cta: { label: "Get involved", href: "/volunteer" },
-  },
+  
 ];
 
 export const POWER_OF_10 = {
@@ -274,7 +329,20 @@ export const REVIEWS = [
 
 export const GOOGLE_REVIEWS_URL = "https://www.google.com/search?q=Sai+Seva+Sangh+Moosapet+Hyderabad+reviews";
 
-export const PARTNERS = ["Worley", "Varma Steels", "Tircon Capacitors", "Feeding India"];
+/** Logos live in /public/images/partners. Change ".png" below if your files use another extension. */
+export const PARTNERS = [
+  { name: "Partner", logo: "/images/partners/one.webp" }, // one: rename once you know who it is
+  { name: "Hope for Humanity", logo: "/images/partners/two.webp" },
+  { name: "State Bank of India", logo: "/images/partners/three.jpg" },
+  { name: "GlobalData", logo: "/images/partners/four.jpg" },
+  { name: "Supergas", logo: "/images/partners/five.jpg" },
+  { name: "Rise Against Hunger", logo: "/images/partners/six.jpg" },
+  { name: "Indian Oil", logo: "/images/partners/seven.jpg" },
+  { name: "Varma Steels", logo: "/images/partners/eight.png" },
+  { name: "Tircon Capacitors", logo: "/images/partners/nine.png" },
+  { name: "Worley", logo: "/images/partners/ten.jpg" },
+  { name: "Zelis", logo: "/images/partners/eleven.jpg" },
+];
 
 export const HOME_STATS = [
   { value: "18,000", label: "Beneficiaries impacted so far", icon: "hand" },
@@ -313,3 +381,41 @@ export const BLOG_POSTS = [
     href: "/blog",
   },
 ];
+
+
+/* ==========================================================================
+   Impact tables (About / Home "Our Impact" section)
+   ========================================================================== */
+
+export const GLANCE_STATS: { value: string; label: string; note?: string; accent?: boolean }[] = [
+  { value: "2,000+", label: "Students Supported", note: "1988–2024" },
+  { value: "75%", label: "Alumni Employed Professionally" },
+  { value: "20%", label: "Alumni as Entrepreneurs", accent: true },
+  { value: "5%", label: "Homemakers", note: "Many Income-Generating" },
+];
+
+export const PROGRAMME_HIGHLIGHTS = [
+  { value: "200", label: "Students in School Education" },
+  { value: "50", label: "Students in Higher Education" },
+  { value: "90,000+", label: "Nutritious Meals Served" },
+  { value: "45", label: "Classical Dancers Trained" },
+  { value: "30", label: "Musicians Trained" },
+  { value: "40", label: "Karate Trainees" },
+  { value: "10", label: "Young Shooters Trained" },
+  { value: "35", label: "Digital Marketing & Design" },
+  { value: "25", label: "Photography & Video Editing" },
+  { value: "52", label: "Event Management" },
+  { value: "30", label: "Reiki Level 1 Certified" },
+  { value: "33", label: "Class 10 Board Exam Students" },
+];
+
+/* ==========================================================================
+   Holistic development panel (used on /project)
+   ========================================================================== */
+
+export const HOLISTIC = [
+  { title: "Character Building", text: "Discipline, responsibility, and ethical values.", icon: Star, tone: "red" },
+  { title: "Communication", text: "Public speaking, collaboration, and leadership skills.", icon: MessageSquare, tone: "purple" },
+  { title: "Adaptability", text: "Preparing students for a rapidly evolving world.", icon: TrendingUp, tone: "green" },
+  { title: "Social Responsibility", text: "Developing compassionate and community-minded leaders.", icon: HandHeart, tone: "orange" },
+] as const;

@@ -13,6 +13,7 @@ import {
   Instagram,
   Users,
 } from "lucide-react";
+import { AboutOrganisation, MissionVision, OurImpact } from "@/components/about";
 import Accordion from "@/components/Accordion";
 import CountUp from "@/components/CountUp";
 import LiteYouTube from "@/components/LiteYouTube";
@@ -76,7 +77,7 @@ export default function HomePage() {
   const heroSlides = HERO_SLIDES.map((s) =>
     s.image ? (
       <div className="hslide hslide--image" key={s.title}>
-        <Image src={s.image} alt={s.alt ?? s.title} fill sizes="(max-width: 1200px) 100vw, 1100px" priority />
+        <Image src={s.image} alt={s.alt ?? s.title} width={1600} height={600} sizes="100vw" priority className="hslide__img" />
       </div>
     ) : (
       <div className="hslide hslide--text" key={s.title}>
@@ -116,24 +117,31 @@ export default function HomePage() {
   return (
     <>
       {/* ------------------------------ HERO ------------------------------ */}
-      <section className="home-hero">
-        <Slider slides={heroSlides} label="Highlights" className="slider--hero" />
+       <section className="home-hero">
+        <Slider slides={heroSlides} label="Highlights" className="slider--hero" adaptive />
         <div className="container home-hero__intro" {...rv("up")}>
           <Image src="/images/logo.png" alt="" width={56} height={45} className="home-hero__logo" />
           <h1 className="serif">{HOME_INTRO.title}</h1>
-          {HOME_INTRO.lines.map((l) => (
+<p className="home-hero__sub serif">{HOME_INTRO.subtitle}</p>
+<AboutOrganisation />
+          {/* {HOME_INTRO.lines.map((l) => (
             <p key={l} className="body">
               {l}
             </p>
-          ))}
+          ))} */}
+          {/* <AboutOrganisation /> */}
           <Link href="/donate" className="btn btn--maroon btn--lg">
             <Heart size={16} fill="currentColor" aria-hidden="true" /> Donate
           </Link>
         </div>
       </section>
+      <section>
+        <MissionVision />
+        <OurImpact />
+      </section>
 
       {/* ------------------------- POWER OF 10 CLUB ------------------------ */}
-      <section className="p10 section" id="power-of-10">
+      {/* <section className="p10 section" id="power-of-10">
         <div className="container p10__card">
           <div className="p10__badge" {...rv("left")}>
             <Image src={POWER_OF_10.badge} alt="Power of 10 Club badge" width={195} height={195} />
@@ -161,7 +169,7 @@ export default function HomePage() {
             <LiteYouTube id={POWER_OF_10.video} title="Power of 10 Club | Sai Seva Sangh" />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* -------------------------- LATEST NEWS --------------------------- */}
       <section className="news section" id="latest-news">
@@ -190,7 +198,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section--tight">
+      {/* <section className="section section--tight">
         <div className="container two-up">
           {FEATURE_VIDEOS.map((v, i) => (
             <div key={v.id} {...rv("up", i)}>
@@ -198,7 +206,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* ---------------------- PHILOSOPHY + GET INVOLVED ------------------ */}
       <section className="phil section" id="philosophy">
@@ -260,7 +268,7 @@ export default function HomePage() {
       </section>
 
       {/* ------------------------ VIDEOS & INSTAGRAM ---------------------- */}
-      <section className="section section--tight">
+      {/* <section className="section section--tight">
         <div className="container two-up">
           {FESTIVAL_VIDEOS.map((v, i) => (
             <div key={v.id} {...rv("up", i)}>
@@ -294,10 +302,10 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* --------------------------- REVIEWS ------------------------------ */}
-      <section className="section section--tight" id="reviews">
+      {/* <section className="section section--tight" id="reviews">
         <div className="container">
           <h2 className="sub-title sub-title--gold" {...rv("up")}>
             Google Reviews
@@ -309,21 +317,28 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ---------------------------- PARTNERS ---------------------------- */}
       <section className="section section--tight" id="partners">
-        <div className="container">
-          <h2 className="sub-title sub-title--gold" {...rv("up")}>
-            Our Partners
-          </h2>
-          <ul className="partners" {...rv("up", 1)}>
-            {PARTNERS.map((p) => (
-              <li key={p}>{p}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
+  <div className="container">
+    <h2 className="sub-title sub-title--gold" {...rv("up")}>
+      Our Partners
+    </h2>
+  </div>
+
+  <div className="marquee" {...rv("up", 1)} aria-label="Our partners">
+    <ul className="marquee__track">
+      {/* list is rendered twice so the loop has no gap; the copy is hidden from screen readers */}
+      {[...PARTNERS, ...PARTNERS].map((p, i) => (
+        <li key={`${p.name}-${i}`} aria-hidden={i >= PARTNERS.length}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={p.logo} alt={i < PARTNERS.length ? p.name : ""} loading="lazy" />
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
 
       {/* ------------------------------ STATS ----------------------------- */}
       <section className="join" id="join">

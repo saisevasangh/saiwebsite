@@ -4,20 +4,21 @@ import CookieBanner from "@/components/CookieBanner";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollEffects from "@/components/ScrollEffects";
+import SplashLoader from "@/components/SplashLoader";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { ORG_NAME, TAGLINE } from "@/lib/content";
 import "./globals.css";
 
 const sans = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-inter",
   display: "swap",
 });
 
 const serif = Playfair_Display({
   subsets: ["latin"],
   style: ["normal", "italic"],
-  variable: "--font-serif",
+  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -42,6 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sans.variable} ${serif.variable}`}>
       <body id="top">
+        <SplashLoader />
         <Header />
         <ScrollEffects />
         <main>{children}</main>

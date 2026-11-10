@@ -25,6 +25,7 @@ Requires Node 18.18+ (Node 20+ recommended) and an internet connection the first
 | --- | --- |
 | `/` | Home page: hero carousel, Power of 10 Club, Latest News, videos, Our Philosophy, Get Involved, Impact Stories, YouTube + Instagram, Google Reviews, Partners, impact counters, Blogs |
 | `/about` | About Us (hero, story, mission/vision/values, impact) |
+| `/project` | The 4S School of Excellence building project: facts, floors, four skills, holistic development, financials, how to contribute (ported from the 4S project) |
 | `/contact-us` | Addresses, phone numbers, emails and map from the live site |
 | every other menu link | Placeholder page generated from `lib/nav.ts` by `app/[...slug]/page.tsx`, with a link to the same page on saisevasangh.org |
 

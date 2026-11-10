@@ -58,6 +58,7 @@ export const FOUR_S: PageContent = {
     { type: "p", text: "By enabling a career debut at 18 and embedding entrepreneurship into education, 4S creates a generation of self-sufficient, skilled, and purpose-driven individuals ready to shape a better future." },
     { type: "h", text: "Join the Movement" },
     { type: "p", text: "Empowering young minds with skills, confidence, and opportunities to succeed." },
+    { type: "link", label: "See the 4S School building project & how to contribute", href: "/project" },
   ],
 };
 

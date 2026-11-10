@@ -10,7 +10,7 @@ import PageBlocks from "@/components/PageBlocks";
  * Placeholder for every menu page that isn't designed yet (see lib/nav.ts).
  * Pages with their own route (/about, /gallery, /contact-us, …) win over this.
  */
-const DESIGNED = new Set(["/", "/about", "/contact-us", "/programs", "/impact", "/news", "/get-involved"]);
+const DESIGNED = new Set(["/", "/about", "/contact-us", "/programs", "/impact", "/news", "/get-involved", "/gallery", "/project"]);
 const LIVE_SITE = "https://saisevasangh.org";
 
 export const dynamicParams = false;
