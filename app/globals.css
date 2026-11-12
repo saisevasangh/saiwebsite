@@ -3456,3 +3456,36 @@ html[data-scrolled] .site-header {
 @media (prefers-reduced-motion: reduce) {
   .progs__card, .progs__img { transition: none; }
 }
+
+.org__download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  background: var(--maroon, #7a1523); /* swap for your brand color variable */
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 2px solid var(--maroon, #7a1523);
+  border-radius: 999px; /* pill; use 8px for a squarer button */
+  box-shadow: 0 6px 16px rgba(122, 21, 35, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.org__download:hover {
+  background: #fff;
+  color: var(--maroon, #7a1523);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(122, 21, 35, 0.28);
+}
+
+.org__download:focus-visible {
+  outline: 3px solid rgba(122, 21, 35, 0.35);
+  outline-offset: 3px;
+}
+
+.org__download svg {
+  flex-shrink: 0;
+}

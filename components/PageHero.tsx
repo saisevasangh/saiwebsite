@@ -32,7 +32,7 @@ export default function PageHero({
     <section className={`page-hero${media ? "" : " page-hero--center"}`}>
       <div className="container page-hero__grid">
         <div className="page-hero__copy">
-          <Sparks className="deco deco--page" />
+          {/* <Sparks className="deco deco--page" /> */}
           <nav aria-label="Breadcrumb" className="crumbs">
             <Link href="/">Home</Link>
             <span aria-hidden="true">/</span>
@@ -45,7 +45,7 @@ export default function PageHero({
             <span aria-current="page">{crumb}</span>
           </nav>
           <h1 className="page-hero__title">{title}</h1>
-          <p className="page-hero__lead">{lead}</p>
+          {/* <p className="page-hero__lead">{lead}</p> */}
           {children}
         </div>
 

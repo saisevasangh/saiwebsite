@@ -547,32 +547,7 @@ export default function HomePage() {
       </section>
     
 
-      {/* LATEST NEWS */}
-      <section className="news section" id="latest-news">
-        <div className="container">
-          <h2 className="h2 serif section-title" {...rv("up")}>
-            Latest News/Activities
-          </h2>
-          <div className="news__grid">
-            <article className="news-card" {...rv("up", 1)}>
-              <FileText size={44} strokeWidth={1.4} aria-hidden="true" />
-              <h3>Newsletters</h3>
-              <p>Read our latest newsletter and catch up on everything happening at Sai Seva Sangh.</p>
-              <Link href="/newsletters" className="btn btn--gold">
-                Know more <ArrowRight size={16} aria-hidden="true" />
-              </Link>
-            </article>
-            <div {...rv("up", 2)}>
-              <LiteYouTube id={NEWSLETTER_VIDEO.id} title={NEWSLETTER_VIDEO.title} />
-            </div>
-          </div>
-          <div className="center">
-            <Link href="/events" className="btn btn--gold">
-              Know more <ArrowRight size={16} aria-hidden="true" />
-            </Link>
-          </div>
-        </div>
-      </section>
+     
 
     {/* RESIDENTIAL + SCHOOL (side by side) */}
 {/* <section className="gi section section--tight" id="our-institutions">
@@ -636,7 +611,32 @@ export default function HomePage() {
           })}
         </div>
       </section>
-
+           {/* LATEST NEWS */}
+      <section className="news section" id="latest-news">
+        <div className="container">
+          <h2 className="h2 serif section-title" {...rv("up")}>
+            Latest News/Activities
+          </h2>
+          <div className="news__grid">
+            <article className="news-card" {...rv("up", 1)}>
+              <FileText size={44} strokeWidth={1.4} aria-hidden="true" />
+              <h3>Newsletters</h3>
+              <p>Read our latest newsletter and catch up on everything happening at Sai Seva Sangh.</p>
+              <Link href="/newsletters" className="btn btn--gold">
+                Know more <ArrowRight size={16} aria-hidden="true" />
+              </Link>
+            </article>
+            <div {...rv("up", 2)}>
+              <LiteYouTube id={NEWSLETTER_VIDEO.id} title={NEWSLETTER_VIDEO.title} />
+            </div>
+          </div>
+          <div className="center">
+            <Link href="/events" className="btn btn--gold">
+              Know more <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </section>
       
 
       {/* PARTNERS */}

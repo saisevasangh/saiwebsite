@@ -157,7 +157,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     title: "Global Women Inspiration Award – 2025",
     text: "C. Aruna Pradeep, Secretary of Sai Seva Sangh, honoured as Women Changemaker in Social Impact on 20th September 2025.",
-    image: "/images/sliders/BUILDING_Banner-001.jpeg",
+    image: "/images/sliders/4S PAGE BANNER.jpeg",
     alt: "Global Women Inspiration Award 2025 — Women Changemaker in Social Impact, C. Aruna Pradeep, Secretary, Sai Seva Sangh",
   },
   {
@@ -425,6 +425,9 @@ export const GLANCE_STATS: { value: string; label: string; note?: string; accent
   { value: "20%", label: "Alumni as Entrepreneurs", accent: true },
   { value: "5%", label: "Homemakers", note: "Many Income-Generating" },
 ];
+
+// lib/content.ts
+export const BROCHURE_URL = "/docs/SSS New Brochure.pdf";
 
 export const PROGRAMME_HIGHLIGHTS = [
   { value: "200", label: "Students in School Education" },

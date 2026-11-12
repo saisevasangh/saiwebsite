@@ -124,7 +124,7 @@ export default function OurImpact() {
               <strong className="serif glance__value glance__value--big">
                 <CountUp value="35,000+" />
               </strong>
-              <span className="glance__label">Students Supported (1988–2024)</span>
+              <span className="glance__label">Beneficiaries Impacted (1988–2024)</span>
             </div>
 
             <div className="glance__alumni">
@@ -139,13 +139,13 @@ export default function OurImpact() {
                   <strong className="serif glance__value glance__value--gold">
                     <CountUp value="75%" />
                   </strong>
-                  <span className="glance__label">Alumni as Entrepreneurs</span>
+                  <span className="glance__label">Employed</span>
                 </div>
                 <div className="glance__half">
                   <strong className="serif glance__value">
                     <CountUp value="25%" />
                   </strong>
-                  <span className="glance__label">Homemakers</span>
+                  <span className="glance__label">Enterprenures</span>
                 </div>
               </div>
             </div>
@@ -154,9 +154,9 @@ export default function OurImpact() {
 
         {/* Programme Highlights */}
         <div className="highlights">
-          <h3 className="highlights__title serif" {...rv("up")}>
+          <h2 className="highlights__title serif" {...rv("up")}>
             Programme Highlights — Academic Year 2025–2026
-          </h3>
+          </h2>
           <p className="body highlights__intro" {...rv("up")}>
             This year, Sai Seva Sangh has continued to expand its reach and deepen its impact
             across multiple dimensions of education and skill development:

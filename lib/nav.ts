@@ -27,7 +27,7 @@ export const NAV: NavItem[] = [
     ],
   },
   {
-    label: "Services",
+    label: "Programs",
     href: "/services",
     children: [
       { label: "Home for Destitute Ladies (since 1988)", href: "/old-age-home-for-women" },
