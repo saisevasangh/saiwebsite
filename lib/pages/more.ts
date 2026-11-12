@@ -34,17 +34,17 @@ const studentVoice = (title: string, who: string): PageContent => ({
 });
 
 export const MORE_PAGES: Record<string, PageContent> = {
-  "/donate": {
-    title: "Donate",
-    lead: "Just ₹10 a day or ₹300 a month can transform a girl’s future.",
-    blocks: [
-      { type: "p", text: "Your gift gives an orphaned or underprivileged girl free education, a safe home, nutritious meals, healthcare and the skills to live a self-reliant life. Donations are eligible for 80G tax benefits." },
-      { type: "h", text: "Ways to give" },
-      { type: "list", items: ["Power of 10 Club — ₹10 a day or ₹300 a month", "Sponsor a girl child", "Sponsor meals, educational material or teachers’ salaries", "Support capital expenditure"] },
-      ...links([["See all ways to collaborate", "/raise-a-collaboration"], ["Volunteer", "/volunteer"]]),
-      { type: "p", text: `To donate or ask for bank details, write to ${EMAIL} or call ${PHONE}.` },
-    ],
-  },
+  // "/donate": {
+  //   title: "Donate",
+  //   lead: "Just ₹10 a day or ₹300 a month can transform a girl’s future.",
+  //   blocks: [
+  //     { type: "p", text: "Your gift gives an orphaned or underprivileged girl free education, a safe home, nutritious meals, healthcare and the skills to live a self-reliant life. Donations are eligible for 80G tax benefits." },
+  //     { type: "h", text: "Ways to give" },
+  //     { type: "list", items: ["Power of 10 Club — ₹10 a day or ₹300 a month", "Sponsor a girl child", "Sponsor meals, educational material or teachers’ salaries", "Support capital expenditure"] },
+  //     ...links([["See all ways to collaborate", "/raise-a-collaboration"], ["Volunteer", "/volunteer"]]),
+  //     { type: "p", text: `To donate or ask for bank details, write to ${EMAIL} or call ${PHONE}.` },
+  //   ],
+  // },
   /* ---------------- About extras ---------------- */
   "/history": {
     title: "History",
