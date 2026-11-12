@@ -135,9 +135,9 @@ export const IMPACT_STATS: { value: string; label: string; note?: string; icon: 
    ========================================================================== */
 
 export const HOME_INTRO = {
-  title: "35 Years of Humble Service",
+  title: "Four Decades of Humble Service",
   subtitle:
-    "Free Residential Care, Education and AI driven skill development for Orphaned and Underprivileged Girls",
+    "Free Residential Care with nutrition and health care, Education and AI driven skill development for Orphaned and Underprivileged Girls",
   lines: [
     `Sai Seva Sangh is a registered charitable organization (Reg. No. ${REG_NO}) guided by the motto “Love All, Serve All.”`,
     "For the past 35 years, the organization has been dedicated to empowering orphaned and underprivileged girl children from low-income communities and rural backgrounds. We provide free, holistic education along with safe residential facilities, focusing on skill development and creating a nurturing environment that enables girls to grow with dignity, confidence and purpose.",
@@ -154,6 +154,12 @@ export type HeroSlide = {
 };
 
 export const HERO_SLIDES: HeroSlide[] = [
+  {
+    title: "Global Women Inspiration Award – 2025",
+    text: "C. Aruna Pradeep, Secretary of Sai Seva Sangh, honoured as Women Changemaker in Social Impact on 20th September 2025.",
+    image: "/images/sliders/BUILDING_Banner-001.jpeg",
+    alt: "Global Women Inspiration Award 2025 — Women Changemaker in Social Impact, C. Aruna Pradeep, Secretary, Sai Seva Sangh",
+  },
   {
     title: "Global Women Inspiration Award – 2025",
     text: "C. Aruna Pradeep, Secretary of Sai Seva Sangh, honoured as Women Changemaker in Social Impact on 20th September 2025.",

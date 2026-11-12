@@ -453,6 +453,8 @@ import {
 } from "@/lib/content";
 import { rv } from "@/lib/reveal";
 import SchoolSpotlight from "@/components/Schoolspotlight";
+import OurPrograms from "@/components/OurPrograms";
+import BuildingCta from "@/components/Buildingcta";
 
 export const metadata: Metadata = {
   title: { absolute: `${ORG_NAME} — 35 Years of Humble Service | ${TAGLINE}` },
@@ -513,19 +515,36 @@ export default function HomePage() {
           <h1 className="serif">{HOME_INTRO.title}</h1>
           <p className="home-hero__sub serif">{HOME_INTRO.subtitle}</p>
           <AboutOrganisation />
-          <Link href="/donate" className="btn btn--maroon btn--lg">
+          {/* <Link href="/donate" className="btn btn--maroon btn--lg">
             <Heart size={16} fill="currentColor" aria-hidden="true" /> Donate
-          </Link>
+          </Link> */}
         </div>
       </section>
 
       {/* MISSION, VISION */}
       <MissionVision />
+      {/* OUR PROGRAM */}
+      <OurPrograms />
         {/* 4S SCHOOL OF EXCELLENCE (renders its own <section>) */}
       <SchoolSpotlight />
+      {/*  Building CTA */}
+      <BuildingCta />
       {/*  IMPACT */}
       <OurImpact />
-
+      {/* IMPACT STORIES */}
+      <section className="stories section" id="impact-stories">
+        <div className="container">
+          <h2 className="h2 serif section-title" {...rv("up")}>
+            Impact Stories
+          </h2>
+          <Slider slides={storySlides} label="Impact stories" interval={9000} className="slider--stories" />
+          <div className="center">
+            <Link href="/donate" className="btn btn--maroon">
+              <Heart size={15} fill="currentColor" aria-hidden="true" /> Donate
+            </Link>
+          </div>
+        </div>
+      </section>
     
 
       {/* LATEST NEWS */}
@@ -556,12 +575,12 @@ export default function HomePage() {
       </section>
 
     {/* RESIDENTIAL + SCHOOL (side by side) */}
-<section className="gi section section--tight" id="our-institutions">
+{/* <section className="gi section section--tight" id="our-institutions">
   <div className="container">
     <h2 className="h2 serif section-title" {...rv("up")}>
       Our Institutions
     </h2>
-    {/* <p className="body" style={{ marginBottom: "20px" }}>{INSTITUTIONS_TEXT}</p> */}
+    
   </div>
 
   <div className="container gi__grid">
@@ -585,7 +604,7 @@ export default function HomePage() {
       );
     })}
   </div>
-</section>
+</section> */}
 
       {/* GET INVOLVED */}
       <section className="gi section section--tight" id="get-involved">
@@ -618,20 +637,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* IMPACT STORIES */}
-      <section className="stories section" id="impact-stories">
-        <div className="container">
-          <h2 className="h2 serif section-title" {...rv("up")}>
-            Impact Stories
-          </h2>
-          <Slider slides={storySlides} label="Impact stories" interval={9000} className="slider--stories" />
-          <div className="center">
-            <Link href="/donate" className="btn btn--maroon">
-              <Heart size={15} fill="currentColor" aria-hidden="true" /> Donate
-            </Link>
-          </div>
-        </div>
-      </section>
+      
 
       {/* PARTNERS */}
       <section className="section section--tight" id="partners">
@@ -654,7 +660,7 @@ export default function HomePage() {
       </section>
 
       {/* JOIN + STATS */}
-      <section className="join" id="join">
+      {/* <section className="join" id="join">
         <div className="container">
           <h2 className="join__title" {...rv("up")}>
             Join <span>{ORG_NAME}</span> to express love and support the noble cause
@@ -688,7 +694,7 @@ export default function HomePage() {
             Donate
           </Link>
         </div>
-      </section>
+      </section> */}
 
       {/* BLOGS */}
       <section className="blogs section" id="blogs">

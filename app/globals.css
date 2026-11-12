@@ -539,7 +539,7 @@ html[data-scrolled] .site-header {
 
 /* ----- desktop mega menu ----- */
 
-@media (min-width: 1280px) {
+@media (min-width: 1600px) {
   :root {
     --header-h: 72px;
   }
@@ -573,7 +573,7 @@ html[data-scrolled] .site-header {
   /* equal-width side blocks keep the menu centred on the page */
   .brand,
   .header__actions {
-    flex: 0 0 clamp(150px, 15vw, 260px);
+    flex: 0 0 clamp(130px, 10vw, 200px);
   }
   .header__actions {
     justify-content: flex-end;
@@ -589,8 +589,8 @@ html[data-scrolled] .site-header {
 
   .nav__link {
     position: relative;
-    padding: 10px 8px;
-    font-size: 0.84rem;
+    padding: 10px 7px;
+    font-size: 0.8rem;
     white-space: nowrap;
   }
 
@@ -712,7 +712,7 @@ html[data-scrolled] .site-header {
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1850px) {
   .nav__link {
     padding-inline: 11px;
     font-size: 0.88rem;
@@ -2878,7 +2878,7 @@ html[data-scrolled] .site-header {
 
 
 /* Desktop: hide hover/focus dropdowns right after a link was clicked, until the pointer leaves the menu. */
-@media (min-width: 1280px) {
+@media (min-width: 1600px) {
   .nav.is-dismissed .nav__sub {
     opacity: 0 !important;
     visibility: hidden !important;
@@ -3407,3 +3407,52 @@ html[data-scrolled] .site-header {
 .spot__btns{display:flex;flex-wrap:wrap;gap:12px}
 @media (max-width:860px){.spot__grid{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.spot__img,.spot__dots button{transition:none}}
+
+/* ---------- Our Programs (4 cards, one row) ---------- */
+.progs { padding-block: clamp(48px, 7vw, 88px); }
+.progs__head { text-align: center; max-width: 640px; margin: 0 auto clamp(28px, 4vw, 44px); }
+.progs__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 24px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.progs__card {
+  display: block;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 22px rgba(90, 20, 20, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.progs__card:hover,
+.progs__card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(90, 20, 20, 0.16);
+}
+.progs__media { position: relative; aspect-ratio: 4 / 3; }
+.progs__img { object-fit: cover; transition: transform 0.4s ease; }
+.progs__card:hover .progs__img { transform: scale(1.05); }
+.progs__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(0.8rem, 1.2vw, 1.05rem);
+  color: var(--maroon);
+  background: #fff;
+}
+.progs__card:hover .progs__label { color: var(--orange-600); }
+@media (max-width: 560px) {
+  .progs__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .progs__card, .progs__img { transition: none; }
+}

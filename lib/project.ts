@@ -1,4 +1,6 @@
-export const DONATE_URL = "https://linktr.ee/acc.saisevasangh99";
+export const DONATE_URL = "https://rzp.io/rzp/4sschoolofexcellence";
+
+
 
 export const FLOORS = [
   { name: "Fourth Floor", sft: 3897, inr: "1,40,29,200", usd: "148,086" },
@@ -31,14 +33,16 @@ export const DETAILS = [
 
 export type Course = {
   id: string;
-  /** Short label shown on the collapsed strip. */
   label: string;
   title: string;
   image: string;
   alt: string;
   accent: string;
+  /** CSS object-position for the card crop, e.g. "50% 0%" anchors to the top so heads stay visible. */
+  focus?: string;
+  /** "contain" shows the whole photo with no cropping. Default is "cover". */
+  fit?: "cover" | "contain";
   tagline?: string;
-  /** Add the fields below to fill in a course; anything left out is simply not shown. */
   diploma?: string;
   skillSet?: string;
   duration?: string[];
@@ -53,19 +57,22 @@ export const COURSES: Course[] = [
     id: "digital-marketing",
     label: "Digital Marketing & Cybersecurity",
     title: "Digital Marketing & Cybersecurity",
-    image: "/images/program-digital.jpg",
+    image: "/images/marketing.jpeg",
     alt: "Students working on laptops",
     accent: "#730f1b",
+    focus: "30% 35%",
+    diploma: "Diploma in Digital Marketing & Cybersecurity for 150 Students",
     tagline: "Details for this course will be added soon.",
   },
   {
     id: "animation",
     label: "Motion Graphics & Graphic Designing",
     title: "Motion Graphics & Graphic Designing",
-    image: "/images/program-animation.jpg",
+    image: "/images/graphic.jpeg",
     alt: "A student creating digital artwork",
     accent: "#5b3fc4",
-    diploma: "AI Driven Diploma in Animation for 50 Students",
+    focus: "62% 30%",
+    diploma: "AI Driven Diploma in Animation for 150 Students",
     skillSet: "Graphic Designing, VFX, 3D modeling, Photo and Video Editing.",
     duration: ["4 Years", "3 Years Class Room Training", "6 Months Internship", "6 Months Industrial Training Program"],
     partners: "CG Creed, HAMSTECH, JNAFAU",
@@ -84,10 +91,11 @@ export const COURSES: Course[] = [
     id: "performing-arts",
     label: "Performing Arts (Dance & Music)",
     title: "Performing Arts (Dance & Music)",
-    image: "/images/program-arts.jpg",
+    image: "/images/dance.jpeg",
     alt: "Students performing classical dance",
     accent: "#e5533f",
-    diploma: "Diploma in Performing Arts for 50 Students",
+     focus: "50% 15%",
+    diploma: "Diploma in Performing Arts for 150 Students",
     skillSet: "Bharatanatyam, Carnatic Music, Make UP & Costume Designing and Musical Instruments.",
     duration: ["4 Years", "4 Years Class Room Training", "Stage Performances"],
     partners: "Varna Arts Academy, Bridge Academy, Tyagaraja Music College",
@@ -106,10 +114,11 @@ export const COURSES: Course[] = [
     id: "nutrition",
     label: "Nutrition & Hospitality",
     title: "Nutrition & Hospitality",
-    image: "/images/program-wellness.jpg",
+    image: "/images/nutrition.png",
     alt: "Students learning nutrition and hospitality",
     accent: "#2e9c62",
-    diploma: "Diploma in Nutrition & Dietetics for 50 Students",
+    focus: "50% 0%",
+    diploma: "Diploma in Nutrition & Dietetics for 150 Students",
     skillSet: "Understanding human physiology, disease and Diet Menu Planning. Cooking and serving, Primary Health Care.",
     duration: ["4 Years", "3 Years Class Room Training", "1 Year Internship"],
     partners: "Nutriline - The Wellness Centre, NIN (National Institute of Nutrition), Home Science College of HYD",

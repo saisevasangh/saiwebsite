@@ -73,9 +73,9 @@ export default function AboutOrganisation() {
 
           <div className="org__copy" {...rv("up", 1)}>
             <p className="body" style={{ textAlign: "justify" }}>
-              For the past <strong>35 years</strong>, the organization has been dedicated to empowering orphaned and
+              For over <strong>four decades</strong>, the organization has been dedicated to empowering orphaned and
               underprivileged girl children from low-income communities and rural backgrounds. We provide{" "}
-              <strong>free, holistic education</strong> along with safe residential facilities, focusing on skill
+              <strong>free, holistic education</strong> along with safe residential facilities with nutrition and health care, focusing on skill
               development and creating a nurturing environment that enables girls to grow with{" "}
               <strong>dignity, confidence and purpose</strong>.
             </p>
